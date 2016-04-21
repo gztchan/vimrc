@@ -1,4 +1,9 @@
-set guifont=Monaco:h11
+set guifont=Source_Code_Pro_Light:h14
+
+let mapleader=","
+
+" Leader
+map <Leader>w :w<CR>
 
 colorscheme monokai
 highlight NonText guibg=#060606
@@ -20,6 +25,9 @@ set nospell
 
 set nu
 
+" global clipboard
+set clipboard=unnamed
+
 set autoread
 
 set nocompatible              " be iMproved, required
@@ -40,6 +48,13 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'depuracao/vim-rdoc'
 Plugin 'tpope/vim-endwise'
+Plugin 'rizzatti/dash.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-rails'
+Plugin 'git@github.com:ervandew/supertab.git'
+Plugin 'Lokaltog/powerline', {'rtp': 'powderline/bindings/vim'}
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'darthmall/vim-vue'
 
 " 寫前端代碼神器
 Plugin 'mattn/emmet-vim'
@@ -63,11 +78,6 @@ set ts=2
 " Neocomplcache
 let g:acp_enableAtStartup = 0
 let g:neocomplcache_enable_at_startup = 1
-
-let mapleader=","
-
-" Leader
-map <Leader>w :w<CR>
 
 map f <Plug>(easymotion-sn)
 let g:EasyMotion_smartcase = 1
@@ -102,4 +112,22 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set expandtab
+
+set autoread
+
+set lines=70 columns=150
+
+" powderline
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
+
+" NERDCommenter
+let g:NERDSpaceDelims=1
+let NERDTreeShowHidden=1
+
+set viminfo='1000,<800
 
